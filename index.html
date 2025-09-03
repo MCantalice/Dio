@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detona Ralph - Jogo Interativo</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <div id="menu" class="tela">
+    <h1 class="titulo-menu">
+        <span>Detona Ralph</span>
+        <img src="src/images/detona.png" alt="Ralph" class="logo-ralph" />
+        
+    </h1>
+    <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    <button onclick="mostrarInstrucoes()">Instruções</button>
+  </div>
+
+  <div id="instrucoes" class="tela" style="display: none;">
+    <h2>Como Jogar</h2>
+    <p>Clique no <strong>Ralph</strong> (🧱) para ganhar pontos.</p>
+    <p>Evite clicar no <strong>Félix</strong> (🛠️) ou perderá pontos!</p>
+    <p>O jogo dura 30 segundos.</p>
+    <button onclick="voltarMenu()">Voltar</button>
+  </div>
+
+  <div id="jogo" class="tela" style="display: none;">
+    <div class="header">
+      <span>⏱️ Tempo: <span id="tempo">30</span>s</span>
+      <span>🏆 Pontos: <span id="pontuacao">0</span></span>
+    </div>
+    <div class="cenario">
+      <div class="janela" id="j1"></div>
+      <div class="janela" id="j2"></div>
+      <div class="janela" id="j3"></div>
+      <div class="janela" id="j4"></div>
+      <div class="janela" id="j5"></div>
+      <div class="janela" id="j6"></div>
+      <div class="janela" id="j7"></div>
+      <div class="janela" id="j8"></div>
+      <div class="janela" id="j9"></div>
+    </div>
+  </div>
+
+  <div id="fim" class="tela" style="display: none;">
+    <h2>Fim de Jogo!</h2>
+    <p>Sua pontuação final foi: <span id="pontuacaoFinal"></span></p>
+    <button onclick="reiniciar()">Voltar ao Menu</button>
+  </div>
+
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>

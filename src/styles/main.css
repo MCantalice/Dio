@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('../images/wall.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #000;
+  font-size: 1.8rem;
+}
+
+.titulo-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 15px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 30px;
+}
+
+.logo-ralph {
+  width: 90px;
+  height: auto;
+}
+
+.tela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  padding: 14px 24px;
+  margin: 12px;
+  background-color: #c0392b; 
+  color: #f1c40f;
+  border: 2px solid #7b241c;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #922b21;
+  transform: scale(1.05);
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.cenario {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.janela {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid white;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.janela:hover {
+  transform: scale(1.05);
+}
+
+.ralph {
+  background-image: url('../images/ralph.png');
+  animation: pulso 0.4s ease-in-out;
+}
+
+.felix {
+  background-image: url('../images/felix.png'); 
+  animation: pulso 0.4s ease-in-out;
+}
+
+@keyframes pulso {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
